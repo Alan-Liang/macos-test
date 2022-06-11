@@ -33,7 +33,8 @@ jobs:
           echo 'a b/c d/e f/g' | cut -d / -f 3
           unzip || true
           x=
-          [ -z $x ] || echo ok
+          [ -z $x ] || echo true
           y=a
-          [ -z $y ] || echo bad
-          mktemp --help
+          [ -z $y ] || echo ok
+          uname -s
+          mktemp ticket.XXXXXXXXXX
