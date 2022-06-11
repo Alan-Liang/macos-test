@@ -25,10 +25,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: help test
-
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
@@ -36,4 +32,8 @@ jobs:
           echo x | grep -i X
           echo 'a b/c d/e f/g' | cut -d / -f 3
           unzip || true
-          
+          x=
+          [ -z $x ] || echo ok
+          y=a
+          [ -z $y ] || echo bad
+          mktemp --help
