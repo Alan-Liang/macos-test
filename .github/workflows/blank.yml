@@ -29,4 +29,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           [ ! abc = abc ] || echo ok
-          mktemp -t /tmp/ticket.XXXXXXXXXX
+          mktemp -t ticket
